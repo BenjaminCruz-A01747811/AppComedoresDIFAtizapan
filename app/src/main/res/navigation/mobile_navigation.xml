@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_perfil_usuario" />
     <fragment
         android:id="@+id/nav_mapa_comedores"
-        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.perfilusuario.PerfilUsuarioFragment"
+        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.mapa.MapaFragment"
         android:label="@string/menu_mapa_comedores"
         tools:layout="@layout/fragment_mapa_comedores" />
 </navigation>

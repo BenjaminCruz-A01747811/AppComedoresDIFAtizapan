@@ -26,7 +26,7 @@ private lateinit var binding: ActivityMainBinding
         setSupportActionBar(binding.appBarMain.toolbar)
 
         binding.appBarMain.btnSoporte.setOnClickListener {view ->
-            Snackbar.make(view, "Aquí van los Ajustes", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "Aquí se redigirá al correo dedicado al Soporte de la APP", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
