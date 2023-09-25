@@ -1,13 +1,13 @@
-package mx.tec.bacc.appcomedoresdifatizapan.ui.home
+package mx.tec.bacc.appcomedoresdifatizapan.ui.mapa
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class MapaViewModel: ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+        value = "Pantalla donde se desplegará un Mapa de los comedores"
     }
     val text: LiveData<String> = _text
 }

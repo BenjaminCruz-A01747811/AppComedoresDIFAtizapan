@@ -2,24 +2,29 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    android:id="@+id/navegacion_mobil"
+    app:startDestination="@+id/nav_asist_qr">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_asist_qr"
+        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.qr.AsistQrFragment"
+        android:label="@string/menu_asist_qr"
+        tools:layout="@layout/fragment_asist_qr" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_menu_dia"
+        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.menudia.MenuDiaFragment"
+        android:label="@string/menu_dia"
+        tools:layout="@layout/fragment_menu_dia" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_perfil_usuario"
+        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.perfilusuario.PerfilUsuarioFragment"
+        android:label="@string/menu_perfil_usuario"
+        tools:layout="@layout/fragment_perfil_usuario" />
+    <fragment
+        android:id="@+id/nav_mapa_comedores"
+        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.perfilusuario.PerfilUsuarioFragment"
+        android:label="@string/menu_mapa_comedores"
+        tools:layout="@layout/fragment_mapa_comedores" />
 </navigation>

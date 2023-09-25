@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_dia" />
+    <string name="menu_asist_qr" />
+    <string name="menu_perfil_usuario" />
+    <string name="menu_mapa_comedores" />
+    <string name="bot_n_para_solicitar_soporte_de_la_app">Botón para solicitar soporte de la app</string>
+</resources>
