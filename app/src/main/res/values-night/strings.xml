@@ -5,4 +5,17 @@
     <string name="menu_perfil_usuario" />
     <string name="menu_mapa_comedores" />
     <string name="bot_n_para_solicitar_soporte_de_la_app">Botón para solicitar soporte de la app</string>
+    <string name="scrollview">scrvw_menudia</string>
+    <string name="comida">Comida</string>
+    <string name="desayuno">Desayuno</string>
+    <string name="fecha">Lunes 25 de agosto 2023</string>
+    <string name="curp1">CUCB011203HCM123NR2</string>
+    <string name="interf3">Perfil del Usuario</string>
+
+    <string name="nombre">Nombre:</string>
+    <string name="nombre1">Rufino Pérez</string>
+    <string name="edad">Edad:</string>
+    <string name="edad1">54 años</string>
+    <string name="curp">CURP:</string>
+
 </resources>

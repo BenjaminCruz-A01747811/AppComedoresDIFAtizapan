@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class PerfilUsuarioViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "Pantalla donde despliega el Perfil de Usuario"
+        value = ""
     }
     val text: LiveData<String> = _text
 }

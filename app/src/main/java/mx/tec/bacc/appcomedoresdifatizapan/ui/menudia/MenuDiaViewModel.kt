@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class MenuDiaViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "Pantalla para desplegar el Menú del Día"
+        value = ""
     }
     val text: LiveData<String> = _text
 }

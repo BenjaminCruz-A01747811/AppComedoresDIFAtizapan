@@ -1,16 +1,45 @@
 <resources>
     <string name="app_name">Comedores DIF Atizapan</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
     <string name="nav_header_title">Rufino Pérez</string>
     <string name="nav_header_subtitle">CUCB011203HCM123NR2</string>
     <string name="nav_header_desc">Navigation header</string>
+
     <string name="action_settings">Ajustes</string>
 
     <string name="menu_asist_qr">Asistencia QR</string>
     <string name="menu_dia">Menú del Día</string>
     <string name="menu_perfil_usuario">Perfil de Usuario</string>
     <string name="menu_mapa_comedores"> Mapa de Comedores </string>
+
     <string name="bot_n_para_solicitar_soporte_de_la_app">Botón para solicitar soporte de la app</string>
-    >
+
+    <string name="scrollview">scrvw_menudia</string>
+
+    <string name="comida">Comida</string>
+    <string name="desayuno">Desayuno</string>
+
+    <string name="fecha">Lunes 25 de agosto 2023</string>
+
+    <string name="nombre">NOMBRE:</string>
+    <string name="nombre1">Rufino Pérez</string>
+
+    <string name="edad">EDAD:</string>
+    <string name="edad1">54 años</string>
+
+    <string name="curp">CURP:</string>
+    <string name="curp1">CUCB011203HCM123NR2</string>
+
+    <string name="interf3">Perfil del Usuario</string>
+
+    <string name="para_llevar">Solicitar "PARA LLEVAR"</string>
+
+    <string name="condicion">CONDICIÓN:</string>
+    <string name="condicion1">Embarazo</string>
+    <string name="condicion2">ECD</string>
+    <string name="condicion3">Discapacidad</string>
+
 </resources>
