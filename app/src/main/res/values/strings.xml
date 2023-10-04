@@ -41,5 +41,7 @@
     <string name="condicion1">Embarazo</string>
     <string name="condicion2">ECD</string>
     <string name="condicion3">Discapacidad</string>
+    
+    <string name="comedorCercano">Buscar comedor cercano</string>
 
 </resources>
