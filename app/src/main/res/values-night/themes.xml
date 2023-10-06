@@ -2,7 +2,7 @@
     <!-- Tema de aplicación básico -->
     <style name="Theme.AppComedoresDIFAtizapan" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color -->
-        <item name="colorPrimary">@color/pink_DIF</item>
+        <item name="colorPrimary">@color/dark_pink_DIF</item>
         <item name="colorPrimaryVariant">@color/blue_DIF</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -13,4 +13,10 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="Theme.AppComedoresDIFAtizapan.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.AppComedoresDIFAtizapan.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 </resources>

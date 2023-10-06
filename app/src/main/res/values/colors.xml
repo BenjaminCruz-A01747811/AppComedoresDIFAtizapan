@@ -3,7 +3,8 @@
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="blue_DIF">#6190C1</color>
-    <color name="pink_DIF">#D36583</color>
+    <color name="dark_pink_DIF">#BF506E</color>
+    <color name="pink_DIF">#FF9DB7</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>

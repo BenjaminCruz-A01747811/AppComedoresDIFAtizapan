@@ -7,163 +7,157 @@
     android:background="@color/background"
     tools:context=".ui.perfilusuario.PerfilUsuarioFragment">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView10"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/Circular"
-        app:srcCompat="@drawable/finalencuadre" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="278dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="32dp"
-        android:background="@color/gray"
-        android:isScrollContainer="false"
-        android:keepScreenOn="false"
-        android:nestedScrollingEnabled="false"
-        android:shadowColor="@color/design_default_color_error"
-        android:text="@string/nombre"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView21"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
-        tools:ignore="TextSizeCheck" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="278dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:background="@color/white"
-        android:text="@string/nombre1"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20"
-        tools:ignore="TextSizeCheck" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageView10"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_gravity="center"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/finalencuadre" />
 
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="278dp"
-        android:layout_height="35dp"
-        android:background="@color/gray"
-        android:text="@string/edad"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        tools:ignore="TextSizeCheck"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="404dp" />
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/gray"
+                android:isScrollContainer="false"
+                android:keepScreenOn="false"
+                android:nestedScrollingEnabled="false"
+                android:shadowColor="@color/design_default_color_error"
+                android:text="@string/nombre"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                tools:ignore="TextSizeCheck" />
 
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="278dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/white"
-        android:text="@string/edad1"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView26"
-        app:layout_constraintEnd_toEndOf="@+id/textView26"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView26"
-        app:layout_constraintTop_toBottomOf="@+id/textView22"
-        app:layout_constraintVertical_bias="0.90999997"
-        tools:ignore="TextSizeCheck" />
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/white"
+                android:text="@string/nombre1"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="TextSizeCheck" />
 
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="278dp"
-        android:layout_height="35dp"
-        android:background="@color/gray"
-        android:text="@string/curp"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView27"
-        app:layout_constraintEnd_toEndOf="@+id/textView27"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView27"
-        app:layout_constraintTop_toBottomOf="@+id/textView25"
-        tools:ignore="TextSizeCheck" />
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/gray"
+                android:text="@string/edad"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                tools:ignore="TextSizeCheck" />
 
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="278dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="44dp"
-        android:background="@color/white"
-        android:text="@string/curp1"
-        android:textColor="@color/black"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextSizeCheck" />
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/white"
+                android:text="@string/edad1"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="TextSizeCheck" />
 
-    <TextView
-        android:id="@+id/textView28"
-        android:layout_width="278dp"
-        android:layout_height="35dp"
-        android:background="@color/gray"
-        android:text="@string/condicion"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView27"
-        app:layout_constraintEnd_toEndOf="@+id/textView27"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView27"
-        app:layout_constraintTop_toBottomOf="@+id/textView25"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="TextSizeCheck" />
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/gray"
+                android:text="@string/curp"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                tools:ignore="TextSizeCheck" />
 
-    <TextView
-        android:id="@+id/textView29"
-        android:layout_width="278dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="44dp"
-        android:background="@color/white"
-        android:text="@string/curp1"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextSizeCheck" />
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/white"
+                android:text="@string/curp1"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="TextSizeCheck" />
 
-    <TextView
-        android:id="@+id/txtPerfilUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="59dp"
-        tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/gray"
+                android:text="@string/condicion"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/white"
+                android:text="@string/condicion2"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/txtPerfilUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="5dp"
+                tools:layout_editor_absoluteY="59dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
