@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class AsistQrViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "Pantalla para el Código QR"
+        value = ""
     }
     val text: LiveData<String> = _text
 }

@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--<string name="menu_dia" />
-    <string name="menu_asist_qr" />
-    <string name="menu_perfil_usuario" />
-    <string name="menu_mapa_comedores" />
-    <string name="bot_n_para_solicitar_soporte_de_la_app">Botón para solicitar soporte de la app</string>
-    <string name="scrollview">scrvw_menudia</string>
-    <string name="comida">Comida</string>
-    <string name="desayuno">Desayuno</string>
-    <string name="fecha">Lunes 25 de agosto 2023</string>
-    <string name="curp1">CUCB011203HCM123NR2</string>
-    <string name="interf3">Perfil del Usuario</string>
-
-    <string name="nombre">Nombre:</string>
-    <string name="nombre1">Rufino Pérez</string>
-    <string name="edad">Edad:</string>
-    <string name="edad1">54 años</string>
-    <string name="curp">CURP:</string>-->
     <string name="app_name">Comedores DIF Atizapan</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -45,6 +28,17 @@
     <string name="condicion1">Embarazo</string>
     <string name="condicion2">ECD</string>
     <string name="condicion3">Discapacidad</string>
+    <string name="generarQR">Generar QR</string>
     <string name="comedorCercano">Buscar comedor cercano</string>
+    <string name="paraLlevar">"Para Llevar"</string>
+    <string name="form_p1">¿Cuál es la fecha de hoy?</string>
+    <string name="form_p2">¿Cuál es la fecha de hoy?</string>
+    <string name="form_p3">¿Cuál es la fecha de hoy?</string>
+    <string name="form_p4">¿Cuál es la fecha de hoy?</string>
+    <string name="leyenda1">El método de pago es en efectivo, y el cobro es de $13 pesos.</string>
+    <string name="cliente"><u>¿Eres cliente? Inicia sesión aquí </u></string>
+    <string name="colaborador"><u>¿Eres colaborador? Inicia sesión aquí</u></string>
+    <string name="cliente2"><u>¿Serás cliente? Regístrate aquí </u></string>
+    <string name="colaborador2"><u>¿Serás colaborador? Regístrate aquí</u></string>
 
 </resources>

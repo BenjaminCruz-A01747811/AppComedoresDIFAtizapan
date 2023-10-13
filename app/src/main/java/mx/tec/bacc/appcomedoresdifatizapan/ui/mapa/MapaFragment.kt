@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentMapaComedoresBinding
+import android.Manifest
 
 class MapaFragment : Fragment() {
 
@@ -26,15 +27,14 @@ class MapaFragment : Fragment() {
          _binding = FragmentMapaComedoresBinding.inflate(inflater, container, false)
          val root: View = binding.root
 
-         val textView: TextView = binding.txtMapa
-         mapaViewModel.text.observe(viewLifecycleOwner) {
-             textView.text = it
-         }
-         return root
-        }
+
+         return TODO("Provide the return value")
+     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }

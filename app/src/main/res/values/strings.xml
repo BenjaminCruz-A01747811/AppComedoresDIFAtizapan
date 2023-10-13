@@ -28,6 +28,17 @@
     <string name="condicion1">Embarazo</string>
     <string name="condicion2">ECD</string>
     <string name="condicion3">Discapacidad</string>
+    <string name="generarQR">Generar QR</string>
     <string name="comedorCercano">Buscar comedor cercano</string>
+    <string name="paraLlevar">"Para Llevar"</string>
+    <string name="form_p1">¿Cuál es la fecha de hoy?</string>
+    <string name="form_p2">¿Cuál es la fecha de hoy?</string>
+    <string name="form_p3">¿Cuál es la fecha de hoy?</string>
+    <string name="form_p4">¿Cuál es la fecha de hoy?</string>
+    <string name="leyenda1">El método de pago es en efectivo, y el cobro es de $13 pesos.</string>
+    <string name="cliente"><u>¿Eres cliente? Inicia sesión aquí </u></string>
+    <string name="colaborador"><u>¿Eres colaborador? Inicia sesión aquí</u></string>
+    <string name="cliente2"><u>¿Serás cliente? Regístrate aquí </u></string>
+    <string name="colaborador2"><u>¿Serás colaborador? Regístrate aquí</u></string>
 
 </resources>

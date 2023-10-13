@@ -13,9 +13,8 @@ import androidx.appcompat.app.AppCompatActivity
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(){
-
     private lateinit var appBarConfiguration: AppBarConfiguration
-private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,17 +33,14 @@ private lateinit var binding: ActivityMainBinding
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
+
         appBarConfiguration = AppBarConfiguration(setOf(
             R.id.nav_asist_qr, R.id.nav_menu_dia, R.id.nav_perfil_usuario, R.id.nav_mapa_comedores), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main, menu)
-        return true
-    }
+
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
