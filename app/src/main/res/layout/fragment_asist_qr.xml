@@ -25,11 +25,8 @@
             android:id="@+id/txt_qr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="8sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,24 +38,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAlignment="center"
+            android:layout_marginBottom="24dp"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold">
 
         </TextView>
-
-        <EditText
-            android:id="@+id/edtUserName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Nombre"
-            android:minHeight="48dp"
-            android:textColorHint="#FCE4EC"
-            android:editable="false"
-            android:focusable="false"
-            tools:ignore="Deprecated,HardcodedText,VisualLintTextFieldSize"
-            android:importantForAutofill="no" />
 
         <ImageView
             android:id="@+id/ivQR"
@@ -71,6 +56,22 @@
             tools:layout_editor_absoluteY="221dp"
             android:importantForAccessibility="no"
             tools:ignore="VisualLintBounds" />
+
+        <EditText
+            android:id="@+id/edtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:ems="15"
+            android:focusable="false"
+            android:hint="ID Código QR"
+            android:importantForAutofill="no"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColorHint="#FCE4EC"
+            android:textStyle="bold|italic"
+            tools:ignore="Deprecated,HardcodedText,VisualLintTextFieldSize" />
 
         <Button
             android:id="@+id/btnGenQR"
