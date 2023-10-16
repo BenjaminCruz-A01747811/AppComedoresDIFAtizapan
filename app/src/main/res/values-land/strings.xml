@@ -40,5 +40,7 @@
     <string name="colaborador"><u>¿Eres colaborador? Inicia sesión aquí</u></string>
     <string name="cliente2"><u>¿Serás cliente? Regístrate aquí </u></string>
     <string name="colaborador2"><u>¿Serás colaborador? Regístrate aquí</u></string>
+    <string name="iniciar_sesion1">INICIAR SESIÓN</string>
+    <string name="registrarme1">REGISTRARME</string>
 
 </resources>
