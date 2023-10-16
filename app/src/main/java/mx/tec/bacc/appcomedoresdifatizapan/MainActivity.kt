@@ -11,6 +11,10 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.ActivityMainBinding
+import android.content.Intent
+import android.net.Uri
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity(){
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -24,10 +28,50 @@ class MainActivity : AppCompatActivity(){
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
-        binding.appBarMain.btnSoporte.setOnClickListener {view ->
-            Snackbar.make(view, "Aquí se redigirá al correo dedicado al Soporte de la APP", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+        binding.appBarMain.btnSoporte.setOnClickListener { view ->
+            val options = arrayOf("Correo electrónico", "WhatsApp")
+            AlertDialog.Builder(this)
+                .setTitle("Selecciona una opción")
+                .setItems(options) { _, which ->
+                    when (which) {
+                        0 -> { // Opción "Correo electrónico"
+                            val email = "a01747811@tec.mx"
+                            val subject = "SOPORTE DE LA APP"
+                            val message = "Escribe aquí tu consulta o problema."
+
+                            val intent = Intent(Intent.ACTION_SEND)
+                            intent.type = "message/rfc822"
+                            intent.putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
+                            intent.putExtra(Intent.EXTRA_SUBJECT, subject)
+                            intent.putExtra(Intent.EXTRA_TEXT, message)
+
+                            try {
+                                startActivity(Intent.createChooser(intent, "Elige una aplicación de correo electrónico"))
+                            } catch (ex: android.content.ActivityNotFoundException) {
+                                // Manejar el caso en el que no hay aplicaciones de correo electrónico disponibles.
+                                Toast.makeText(this, "No se encontró una aplicación de correo electrónico.", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                        1 -> { // Opción "WhatsApp"
+                            val phoneNumber = "55 4836 3580"  // Reemplaza con el número de teléfono al que deseas enviar el mensaje.
+                            val message = "Hola, necesito soporte para la aplicación."
+
+                            val intent = Intent(Intent.ACTION_VIEW)
+                            intent.data = Uri.parse("https://api.whatsapp.com/send?phone=$phoneNumber&text=${Uri.encode(message)}")
+
+                            if (intent.resolveActivity(packageManager) != null) {
+                                startActivity(intent)
+                            } else {
+                                // Manejar el caso en el que no se pueda abrir WhatsApp.
+                                Toast.makeText(this, "No se encontró la aplicación de WhatsApp.", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    }
+                }
+                .show()
         }
+
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)

@@ -47,6 +47,18 @@
 
         </TextView>
 
+        <EditText
+            android:id="@+id/edtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nombre"
+            android:minHeight="48dp"
+            android:textColorHint="#FCE4EC"
+            android:editable="false"
+            android:focusable="false"
+            tools:ignore="Deprecated,HardcodedText,VisualLintTextFieldSize"
+            android:importantForAutofill="no" />
 
         <ImageView
             android:id="@+id/ivQR"
@@ -56,7 +68,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/ic_launcher_foreground"
-            tools:layout_editor_absoluteY="221dp" />
+            tools:layout_editor_absoluteY="221dp"
+            android:importantForAccessibility="no"
+            tools:ignore="VisualLintBounds" />
 
         <Button
             android:id="@+id/btnGenQR"
@@ -67,6 +81,7 @@
             android:text="@string/generarQR"
             android:textColor="@color/black"
             android:textSize="18sp"
+            tools:ignore="TextSizeCheck"
             tools:layout_editor_absoluteY="606dp" />
 
     </LinearLayout>
