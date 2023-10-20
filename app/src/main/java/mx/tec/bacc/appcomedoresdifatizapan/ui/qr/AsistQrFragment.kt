@@ -55,13 +55,12 @@ class AsistQrFragment : Fragment() {
 
     // Crear un documento con datos en la colección "usuarios"
     val primerDocumento = hashMapOf(
-      "userID" to "GOIJ800605",
-      "nombre" to "Juan",
-      "apellidos" to "González",
-      "curp" to "GOIJ800605HMCNHUA2",
-      "fechaNac" to "05/06/1980",
+      "nombre" to "Lalo",
+      "apellidos" to "Cruz",
+      "curp" to "L4L0NG4N1ZA",
+      "fechaNac" to "18/12/1234",
       "sexo" to "Hombre",
-      "condicion" to "ECD"
+      "condicion" to "Discapacidad"
     )
 
     usuariosCollection

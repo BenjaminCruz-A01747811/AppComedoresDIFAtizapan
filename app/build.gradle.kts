@@ -59,9 +59,11 @@ dependencies {
 
     implementation ("com.google.android.material:material:1.9.0")
     implementation("com.google.firebase:firebase-database-ktx:20.2.2")
+
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("com.google.firebase:firebase-firestore-ktx:24.8.1")
     implementation("com.google.firebase:firebase-auth-ktx:22.1.2")
+    implementation("com.google.android.libraries.places:places:3.2.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
