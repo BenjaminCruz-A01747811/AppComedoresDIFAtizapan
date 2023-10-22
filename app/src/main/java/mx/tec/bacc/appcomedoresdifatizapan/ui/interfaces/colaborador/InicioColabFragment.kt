@@ -34,7 +34,7 @@ class InicioColabFragment: Fragment() {
             val contraString = etContra.text.toString().trim()
         }
 
-        // Setear el evento onClick()
+        // Cambiar a Registro Colaborador
         val tvRegColab = view?.findViewById<TextView>(R.id.nav_int_registro_cliente)
         tvRegColab?.setOnClickListener {
             // Iniciar el nuevo fragmento

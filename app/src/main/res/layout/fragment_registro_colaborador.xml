@@ -48,7 +48,7 @@
             tools:ignore="HardcodedText" />
 
         <EditText
-            android:id="@+id/editTextText3"
+            android:id="@+id/edtNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -72,7 +72,7 @@
             tools:ignore="HardcodedText" />
 
         <EditText
-            android:id="@+id/editTextText6"
+            android:id="@+id/edtApellido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -96,7 +96,7 @@
             tools:ignore="HardcodedText" />
 
         <EditText
-            android:id="@+id/editTextText8"
+            android:id="@+id/edtContra3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -109,7 +109,7 @@
             tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
 
         <Button
-            android:id="@+id/btnIngresar2"
+            android:id="@+id/btnRegColab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -130,7 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="32dp"
-            android:text="@string/cliente2"
+            android:text="¿Ya eres colaborador? Inicia sesión aquí."
             android:textSize="16sp"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
