@@ -129,18 +129,19 @@
             tools:ignore="HardcodedText" />
 
         <TextView
-            android:id="@+id/tvISCliente"
+            android:id="@+id/tvRegColab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="56dp"
-            android:text="@string/cliente"
+            android:text="¿Eres nuev@? Regístrate aquí"
             android:textSize="16sp"
             android:textStyle="italic"
+            android:clickable="true"
+            android:onClick="Ir_al_registro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button3"
-            tools:ignore="TextContrastCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/button3"/>
 
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
