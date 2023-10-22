@@ -8,8 +8,10 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.tasks.await
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentInicioClienteBinding
+import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
 
 class InicioClienteFragment: Fragment() {
     private val binding get() = _binding!!
@@ -17,43 +19,41 @@ class InicioClienteFragment: Fragment() {
     private lateinit var auth: FirebaseAuth
     val db = FirebaseFirestore.getInstance()
 
-    data class Usuario(
-        val nombre: String,
-        val apellidos: String,
-        val curp: String,
-        val fechaNac: String,
-        val sexo: String,
-        val condicion: String,
-        val contrasena: String
-    )
-
-    fun searchUsuarioByCurp(targetCurp: String): Usuario? {
+    fun searchUsuarioByCurp(targetCurp: String, callback: (Usuario?) -> Unit) {
         val usuariosCollection = db.collection("usuarios")
 
         try {
-            val querySnapshot = usuariosCollection.whereEqualTo("curp", targetCurp).get().await()
+            usuariosCollection.whereEqualTo("curp", targetCurp).get()
+                .addOnSuccessListener { querySnapshot ->
+                    for (document in querySnapshot.documents) {
+                        val data = document.data
+                        if (data != null) {
+                            val usuario = Usuario(
+                                data["nombre"] as String,
+                                data["apellidos"] as String,
+                                data["curp"] as String,
+                                data["fechaNac"] as String,
+                                data["sexo"] as String,
+                                data["condicion"] as String,
+                                data["contraseña"] as String
+                            )
+                            callback(usuario)
+                            return@addOnSuccessListener
+                        }
+                    }
 
-            for (document in querySnapshot.documents) {
-                val data = document.data
-                if (data != null) {
-                    return Usuario(
-                        data["nombre"] as String,
-                        data["apellidos"] as String,
-                        data["curp"] as String,
-                        data["fechaNac"] as String,
-                        data["sexo"] as String,
-                        data["condicion"] as String,
-                        data["contraseña"] as String
-                    )
+                    // If no matching document is found, return null
+                    callback(null)
                 }
-            }
-
-            // If no matching document is found, return null
-            return null
+                .addOnFailureListener { exception ->
+                    // Handle the exception here if necessary
+                    callback(null)
+                }
         } catch (e: Exception) {
-            return null
+            callback(null)
         }
     }
+
 
 
     override fun onCreateView(
@@ -73,10 +73,20 @@ class InicioClienteFragment: Fragment() {
             val curpString = etCurp.text.toString().trim()
             val passwordString = etContra.text.toString().trim()
 
-           /* suspend fun run() {
+            fun run() {
                 val targetCurp = "CURP12345"
 
-                val foundUsuario = searchUsuarioByCurp(targetCurp)
+                val foundUsuario = searchUsuarioByCurp(targetCurp) { usuario ->
+                    // Handle the result here
+                    if (usuario != null) {
+                        // A matching user was found
+                        // Use the `usuario` object
+                        println("User found: ${usuario.nombre} ${usuario.apellidos}")
+                    } else {
+                        // No matching user found
+                        println("User not found.")
+                    }
+                }
 
                 if (foundUsuario != null) {
                     println("Found User: ${foundUsuario.nombre} ${foundUsuario.apellidos}")
@@ -86,9 +96,9 @@ class InicioClienteFragment: Fragment() {
                 }
             }
 
-            runBlocking { run() } */
+            run()
 
-            searchUsuarioByCurp(curpString)
+
 
 
         }

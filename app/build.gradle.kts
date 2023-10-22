@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "mx.tec.bacc.appcomedoresdifatizapan"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -64,6 +64,8 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore-ktx:24.8.1")
     implementation("com.google.firebase:firebase-auth-ktx:22.1.2")
     implementation("com.google.android.libraries.places:places:3.2.0")
+
+    implementation ("com.google.zxing:core:3.4.1" ) // Adjust the version as needed
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
