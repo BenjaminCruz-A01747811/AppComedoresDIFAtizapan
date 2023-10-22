@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentRegistroClienteBinding
 import java.time.format.DateTimeFormatter
+import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
 
 class RegistroClienteFragment: Fragment() {
     private val binding get() = _binding!!

@@ -14,21 +14,34 @@ import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentInicioClienteBind
 import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
 
 class InicioClienteFragment: Fragment() {
+
     private val binding get() = _binding!!
     private var _binding: FragmentInicioClienteBinding? = null
-    private lateinit var auth: FirebaseAuth
     val db = FirebaseFirestore.getInstance()
 
-    fun searchUsuarioByCurp(targetCurp: String, callback: (Usuario?) -> Unit) {
+    object GlobalVariables {
+        var nombre: String = ""
+        var apellidos: String = ""
+        var curp: String = ""
+        var fechaNac: String = ""
+        var sexo: String = ""
+        var condicion: String = ""
+        var notNull: Boolean = true
+        var contraseña: String = ""
+    }
+
+    fun searchUsuarioByCurp(targetCurp: String, targetContraseña: String, callback: (Usuario?) -> Unit) {
         val usuariosCollection = db.collection("usuarios")
 
         try {
-            usuariosCollection.whereEqualTo("curp", targetCurp).get()
+            usuariosCollection.whereEqualTo("curp", targetCurp)
+                .whereEqualTo("contraseña", targetContraseña)
+                .get()
                 .addOnSuccessListener { querySnapshot ->
                     for (document in querySnapshot.documents) {
                         val data = document.data
                         if (data != null) {
-                            val usuario = Usuario(
+                             val usuario = Usuario(
                                 data["nombre"] as String,
                                 data["apellidos"] as String,
                                 data["curp"] as String,
@@ -73,30 +86,29 @@ class InicioClienteFragment: Fragment() {
             val curpString = etCurp.text.toString().trim()
             val passwordString = etContra.text.toString().trim()
 
-            fun run() {
-                val targetCurp = "CURP12345"
-
-                val foundUsuario = searchUsuarioByCurp(targetCurp) { usuario ->
+                val foundUsuario = searchUsuarioByCurp(curpString, passwordString) { usuario ->
                     // Handle the result here
                     if (usuario != null) {
                         // A matching user was found
                         // Use the `usuario` object
-                        println("User found: ${usuario.nombre} ${usuario.apellidos}")
+                        GlobalVariables.nombre = usuario.nombre
+                        GlobalVariables.apellidos = usuario.apellidos
+                        GlobalVariables.curp = usuario.curp
+                        GlobalVariables.fechaNac = usuario.fechaNac
+                        GlobalVariables.sexo = usuario.sexo
+                        GlobalVariables.condicion = usuario.condicion
+                        GlobalVariables.contraseña = usuario.contrasena
+                        GlobalVariables.notNull = true
                     } else {
                         // No matching user found
                         println("User not found.")
+                        GlobalVariables.notNull = false
                     }
                 }
 
-                if (foundUsuario != null) {
-                    println("Found User: ${foundUsuario.nombre} ${foundUsuario.apellidos}")
 
-                } else {
-                    println("No user with the specified CURP found.")
-                }
-            }
 
-            run()
+
 
 
 
@@ -107,18 +119,14 @@ class InicioClienteFragment: Fragment() {
         return root
     }
 
-    public override fun onStart() {
-        super.onStart()
 
-        updateUI()
-    }
 
-    fun updateUI(user: Usuario?) {
-        if (user != null) {
+    fun updateUI() {
+        if (GlobalVariables.notNull) {
             // El usuario está autenticado, puedes realizar acciones específicas para un usuario autenticado.
             // Por ejemplo, mostrar su nombre en la interfaz de usuario.
-            val curpUsuario = user.curp
-            val contraUsuario = user.contrasena
+            val curpUsuario =   GlobalVariables.curp
+            val contraUsuario = GlobalVariables.contraseña
 
             // Actualiza la interfaz de usuario con la información del usuario
             // (puedes hacer esto de acuerdo a tus necesidades)
@@ -139,6 +147,10 @@ class InicioClienteFragment: Fragment() {
             // También puedes deshabilitar funcionalidades que requieran autenticación.
         }
     }
+    public override fun onStart() {
+        super.onStart()
 
+        updateUI()
+    }
 }
 

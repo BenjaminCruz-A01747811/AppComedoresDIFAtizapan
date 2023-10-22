@@ -18,7 +18,8 @@ import com.journeyapps.barcodescanner.BarcodeEncoder
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentAsistQrBinding
 import java.util.Calendar
 import java.util.Locale
-import com.google.zxing.BinaryBitmap
+import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
+/*import com.google.zxing.BinaryBitmap
 import com.google.zxing.DecodeHintType
 import com.google.zxing.MultiFormatReader
 import com.google.zxing.Result
@@ -32,7 +33,7 @@ import java.io.File
 import java.io.IOException
 import java.util.EnumMap
 import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
-import com.google.zxing.client.j2se.MatrixToImageWriter
+import com.google.zxing.client.j2se.MatrixToImageWriter*/
 
 
 class AsistQrFragment : Fragment() {
@@ -46,7 +47,7 @@ class AsistQrFragment : Fragment() {
   // Declarar una referencia a la base de datos
   private lateinit var databaseReference: DatabaseReference
 
-  fun generateQRCodeFromData(data: Usuario, qrCodeSize: Int): BufferedImage {
+  /*fun generateQRCodeFromData(data: Usuario, qrCodeSize: Int): BufferedImage {
     // Using Gson to convert data to JSON
     val gson = Gson()
     val jsonData = gson.toJson(data)
@@ -76,7 +77,7 @@ class AsistQrFragment : Fragment() {
       e.printStackTrace()
       return null
     }
-  }
+  }*/
 
   override fun onCreateView(
     inflater: LayoutInflater,
