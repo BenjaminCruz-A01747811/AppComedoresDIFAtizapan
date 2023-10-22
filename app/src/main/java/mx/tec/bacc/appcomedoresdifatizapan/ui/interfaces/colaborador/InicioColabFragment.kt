@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentInicioColaboradorBinding
 
 class InicioColabFragment: Fragment() {
-    private val binding get() = _bindig!!
-    private var _bindig = FragmentInicioColaboradorBinding? = null
+    private val binding get() = _binding!!
+    private var _binding: FragmentInicioColaboradorBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -17,10 +17,17 @@ class InicioColabFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View{
 
-        _bindig = FragmentInicioColaboradorBinding.inflate(inflater,container,false)
+        _binding = FragmentInicioColaboradorBinding.inflate(inflater,container,false)
         val root: View = binding.root
 
         val etCorreo = binding.edtCorreo
+        val etContra = binding.edtContra2
+        val btnIngresar = binding.btnIngresar2
+
+        btnIngresar.setOnClickListener{
+            val correoString = etCorreo.text.toString().trim()
+            val contraString = etContra.text.toString().trim()
+        }
 
         return root
     }
