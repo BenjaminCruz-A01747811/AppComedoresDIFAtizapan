@@ -26,15 +26,15 @@
 
     <fragment
         android:id="@+id/nav_int_inicio_colab"
-        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.InicioColabFragment"
+        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.colaborador.InicioColabFragment"
         android:label="Inicio Colaborador"
-        tools:layout="@layout/fragment_inicio_app"/>
+        tools:layout="@layout/fragment_inicio_colaborador"/>
 
     <fragment
         android:id="@+id/nav_int_registro_colab"
-        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.RegistroColabFragment"
+        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.colaborador.RegistroColabFragment"
         android:label="Registro Colaborador"
-        tools:layout="@layout/fragment_inicio_app"/>
+        tools:layout="@layout/fragment_registro_colaborador"/>
 
     <fragment
         android:id="@+id/nav_asist_qr"
