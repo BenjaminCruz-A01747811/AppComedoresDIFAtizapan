@@ -19,7 +19,7 @@ class InicioClienteFragment: Fragment() {
     private var _binding: FragmentInicioClienteBinding? = null
     val db = FirebaseFirestore.getInstance()
 
-    object GlobalVariables {
+    object usuarioIni {
         var nombre: String = ""
         var apellidos: String = ""
         var curp: String = ""
@@ -91,28 +91,20 @@ class InicioClienteFragment: Fragment() {
                     if (usuario != null) {
                         // A matching user was found
                         // Use the `usuario` object
-                        GlobalVariables.nombre = usuario.nombre
-                        GlobalVariables.apellidos = usuario.apellidos
-                        GlobalVariables.curp = usuario.curp
-                        GlobalVariables.fechaNac = usuario.fechaNac
-                        GlobalVariables.sexo = usuario.sexo
-                        GlobalVariables.condicion = usuario.condicion
-                        GlobalVariables.contraseña = usuario.contrasena
-                        GlobalVariables.notNull = true
+                        usuarioIni.nombre = usuario.nombre
+                        usuarioIni.apellidos = usuario.apellidos
+                        usuarioIni.curp = usuario.curp
+                        usuarioIni.fechaNac = usuario.fechaNac
+                        usuarioIni.sexo = usuario.sexo
+                        usuarioIni.condicion = usuario.condicion
+                        usuarioIni.contraseña = usuario.contrasena
+                        usuarioIni.notNull = true
                     } else {
                         // No matching user found
                         println("User not found.")
-                        GlobalVariables.notNull = false
+                        usuarioIni.notNull = false
                     }
                 }
-
-
-
-
-
-
-
-
         }
 
 
@@ -122,11 +114,11 @@ class InicioClienteFragment: Fragment() {
 
 
     fun updateUI() {
-        if (GlobalVariables.notNull) {
+        if (usuarioIni.notNull) {
             // El usuario está autenticado, puedes realizar acciones específicas para un usuario autenticado.
             // Por ejemplo, mostrar su nombre en la interfaz de usuario.
-            val curpUsuario =   GlobalVariables.curp
-            val contraUsuario = GlobalVariables.contraseña
+            val curpUsuario =   usuarioIni.curp
+            val contraUsuario = usuarioIni.contraseña
 
             // Actualiza la interfaz de usuario con la información del usuario
             // (puedes hacer esto de acuerdo a tus necesidades)

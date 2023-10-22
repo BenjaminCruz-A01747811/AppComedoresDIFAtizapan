@@ -19,21 +19,7 @@ import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentAsistQrBinding
 import java.util.Calendar
 import java.util.Locale
 import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
-/*import com.google.zxing.BinaryBitmap
-import com.google.zxing.DecodeHintType
-import com.google.zxing.MultiFormatReader
-import com.google.zxing.Result
-import com.google.zxing.client.j2se.BufferedImageLuminanceSource
-import com.google.zxing.common.HybridBinarizer
-import com.google.zxing.qrcode.QRCodeReader
-import com.google.gson.Gson
-import com.google.zxing.qrcode.QRCodeWriter
-import java.awt.image.BufferedImage
-import java.io.File
-import java.io.IOException
-import java.util.EnumMap
-import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
-import com.google.zxing.client.j2se.MatrixToImageWriter*/
+
 
 
 class AsistQrFragment : Fragment() {
@@ -47,37 +33,7 @@ class AsistQrFragment : Fragment() {
   // Declarar una referencia a la base de datos
   private lateinit var databaseReference: DatabaseReference
 
-  /*fun generateQRCodeFromData(data: Usuario, qrCodeSize: Int): BufferedImage {
-    // Using Gson to convert data to JSON
-    val gson = Gson()
-    val jsonData = gson.toJson(data)
 
-    // Generating a QR code
-    val bitMatrix = QRCodeWriter().encode(jsonData, BarcodeFormat.QR_CODE, qrCodeSize, qrCodeSize)
-
-    // Convert the bit matrix to a BufferedImage
-    return MatrixToImageWriter.toBufferedImage(bitMatrix)
-  }
-
-  fun readQRCodeToData(qrCodeImageFile: File): Usuario? {
-    try {
-      val hints: MutableMap<DecodeHintType, Any> = EnumMap(DecodeHintType::class.java)
-      hints[DecodeHintType.CHARACTER_SET] = "UTF-8"
-
-      val qrCodeImage = javax.imageio.ImageIO.read(qrCodeImageFile)
-      val source = BufferedImageLuminanceSource(qrCodeImage)
-      val bitmap = BinaryBitmap(HybridBinarizer(source))
-
-      val result: Result = QRCodeReader().decode(bitmap, hints)
-      val jsonData = result.text
-
-      val gson = Gson()
-      return gson.fromJson(jsonData, Usuario::class.java)
-    } catch (e: Exception) {
-      e.printStackTrace()
-      return null
-    }
-  }*/
 
   override fun onCreateView(
     inflater: LayoutInflater,
