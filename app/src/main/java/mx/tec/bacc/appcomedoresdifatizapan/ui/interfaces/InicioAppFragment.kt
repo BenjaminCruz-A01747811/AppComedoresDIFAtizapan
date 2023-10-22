@@ -23,19 +23,19 @@ class InicioAppFragment : Fragment() {
         _binding = FragmentInicioAppBinding.inflate(inflater,container,false)
         val root: View = binding.root
 
-        val btnRegistro:Button = binding.btnRegistro
-        val btnInicioSesion:Button = binding.btnInicioSesion
+        val btnCliente:Button = binding.btnCliente
+        val btnInicioSesion:Button = binding.btnColab
 
         // Configura un OnClickListener para el botón btnRegistro
-        btnRegistro.setOnClickListener {
+        btnCliente.setOnClickListener {
             // Navega al fragmento de RegistroClienteFragment
-            findNavController().navigate(R.id.nav_int_registro_cliente)
+            findNavController().navigate(R.id.nav_int_inicio_cliente)
         }
 
         // Configura un OnClickListener para el botón btnInicioSesion
         btnInicioSesion.setOnClickListener {
             // Navega al fragmento de InicioClienteFragment
-            findNavController().navigate(R.id.nav_int_inicio_cliente)
+            findNavController().navigate(R.id.nav_int_inicio_colab)
         }
         return root
 

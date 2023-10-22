@@ -13,16 +13,28 @@
         tools:layout="@layout/fragment_inicio_app"/>
 
     <fragment
+        android:id="@+id/nav_int_inicio_cliente"
+        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.InicioClienteFragment"
+        android:label="Inicio de Sesión del Cliente"
+        tools:layout="@layout/fragment_inicio_cliente"/>
+
+    <fragment
         android:id="@+id/nav_int_registro_cliente"
-        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.RegistroClienteFragment"
+        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.RegistroClienteFragment"
         android:label="Registro Cliente"
         tools:layout="@layout/fragment_registro_cliente"/>
 
     <fragment
-        android:id="@+id/nav_int_inicio_cliente"
-        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.InicioClienteFragment"
-        android:label="Inicio de Sesión del Cliente"
-        tools:layout="@layout/fragment_inicio_cliente"/>
+        android:id="@+id/nav_int_inicio_colab"
+        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.InicioColabFragment"
+        android:label="Inicio Colaborador"
+        tools:layout="@layout/fragment_inicio_app"/>
+
+    <fragment
+        android:id="@+id/nav_int_registro_colab"
+        android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.RegistroColabFragment"
+        android:label="Registro Colaborador"
+        tools:layout="@layout/fragment_inicio_app"/>
 
     <fragment
         android:id="@+id/nav_asist_qr"

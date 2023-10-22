@@ -1,4 +1,4 @@
-package mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces
+package mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente
 
 import android.os.Bundle
 import android.view.LayoutInflater

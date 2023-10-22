@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue"
-    tools:context=".ui.qr.interfaces.RegistroClienteFragment" >
+    tools:context=".ui.qr.interfaces.RegistroClienteFragment">
 
     <ScrollView
         android:layout_width="match_parent"

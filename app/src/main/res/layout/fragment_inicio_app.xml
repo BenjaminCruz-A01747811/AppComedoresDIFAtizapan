@@ -37,23 +37,23 @@
             tools:ignore="ImageContrastCheck" />
 
         <Button
-            android:id="@+id/btnRegistro"
+            android:id="@+id/btnCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="150dp"
             android:layout_marginBottom="4dp"
             android:background="@drawable/button_blue"
-            android:text="@string/registrarme1"/>
+            android:text="Cliente"/>
 
         <Button
-            android:id="@+id/btnInicioSesion"
+            android:id="@+id/btnColab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="4dp"
             android:background="@drawable/button_purple"
-            android:text="@string/iniciar_sesion1"/>
+            android:text="Colaborador"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
