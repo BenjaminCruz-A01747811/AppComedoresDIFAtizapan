@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import mx.tec.bacc.appcomedoresdifatizapan.R
@@ -103,6 +104,7 @@ class InicioColabFragment: Fragment() {
                 } else {
                     // No matching user found
                     println("User not found.")
+                    Toast.makeText(context, "El usuario no existe o datos mal ingresados", Toast.LENGTH_SHORT).show()
                     colaboradorIni.notNull = false
                 }
             }

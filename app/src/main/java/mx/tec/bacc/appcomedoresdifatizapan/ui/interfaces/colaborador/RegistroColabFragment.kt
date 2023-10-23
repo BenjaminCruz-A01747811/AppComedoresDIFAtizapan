@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import mx.tec.bacc.appcomedoresdifatizapan.R
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentInicioColaboradorBinding
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentRegistroColaboradorBinding
@@ -87,7 +88,7 @@ class RegistroColabFragment: Fragment() {
         // Cambiar a Inicio Colaborador
         tvInicColab.setOnClickListener {
             // Iniciar el nuevo fragmento
-            startActivity(Intent(activity, FragmentInicioColaboradorBinding::class.java))
+            findNavController().navigate(R.id.nav_int_inicio_colab)
         }
 
         return root
