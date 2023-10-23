@@ -116,29 +116,30 @@ class InicioClienteFragment: Fragment() {
     fun updateUI() {
         if (usuarioIni.notNull) {
             // El usuario está autenticado, puedes realizar acciones específicas para un usuario autenticado.
-            // Por ejemplo, mostrar su nombre en la interfaz de usuario.
-            val curpUsuario =   usuarioIni.curp
+            // Por ejemplo, mostrar su CURP en la interfaz de usuario.
+            val curpUsuario = usuarioIni.curp
             val contraUsuario = usuarioIni.contraseña
 
             // Actualiza la interfaz de usuario con la información del usuario
             // (puedes hacer esto de acuerdo a tus necesidades)
-            // Por ejemplo, puedes mostrar el nombre del usuario en un TextView.
-            nombreTextView.text = "Nombre: $nombreUsuario"
-            emailTextView.text = "Email: $emailUsuario"
+            // Por ejemplo, puedes mostrar el CURP del usuario en un TextView.
+            edtCurp.text = "CURP: $curpUsuario"
+            edtContra.text = "Contraseña: $contraUsuario"
 
             // Además, puedes habilitar o deshabilitar funcionalidades específicas para usuarios autenticados.
 
         } else {
-            // El usuario no está autenticado, puedes realizar acciones específicas para un usuario no autenticado.
+            // El usuario no está autenticado, puedesok realizar acciones específicas para un usuario no autenticado.
             // Por ejemplo, ocultar elementos de la interfaz de usuario que requieren autenticación.
 
             // Puedes mostrar un mensaje para alentar al usuario a iniciar sesión o registrarse.
-            nombreTextView.text = "Usuario no autenticado"
-            emailTextView.text = ""
+            curpTextView.text = "Usuario no autenticado"
+            contraTextView.text = ""
 
             // También puedes deshabilitar funcionalidades que requieran autenticación.
         }
     }
+
     public override fun onStart() {
         super.onStart()
 

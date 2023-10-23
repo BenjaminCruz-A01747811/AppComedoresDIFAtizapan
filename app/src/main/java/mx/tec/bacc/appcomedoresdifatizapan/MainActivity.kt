@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity(){
                             }
                         }
                         1 -> { // Opción "WhatsApp"
-                            val phoneNumber = "55 4836 3580"  // Reemplaza con el número de teléfono al que deseas enviar el mensaje.
+                            val phoneNumber = ""  // Reemplaza con el número de teléfono al que deseas enviar el mensaje.
                             val message = "Hola, necesito soporte para la aplicación."
 
                             val intent = Intent(Intent.ACTION_VIEW)
