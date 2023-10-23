@@ -267,7 +267,7 @@
                 tools:ignore="HardcodedText" />
 
             <TextView
-                android:id="@+id/tvISColab"
+                android:id="@+id/tvInicioCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"

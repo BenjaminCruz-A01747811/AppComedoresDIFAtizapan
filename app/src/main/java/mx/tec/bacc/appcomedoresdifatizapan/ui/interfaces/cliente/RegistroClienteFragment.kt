@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import mx.tec.bacc.appcomedoresdifatizapan.R
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentRegistroClienteBinding
 import java.time.format.DateTimeFormatter
 import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
@@ -36,6 +38,7 @@ class RegistroClienteFragment: Fragment() {
         val password = binding.passwordET
         val sexo = binding.sexoET
         val condicion = binding.condicionET
+        val tvInicCliente = binding.tvInicioCliente
 
         fun getCurrentDate(): String {
             val currentDate = java.time.LocalDate.now()
@@ -92,6 +95,11 @@ class RegistroClienteFragment: Fragment() {
                     }
                 }
             }
+        }
+
+        // Cambiar a Inicio Cliente
+        tvInicCliente.setOnClickListener {
+            findNavController().navigate(R.id.nav_int_inicio_cliente)
         }
 
         return root
