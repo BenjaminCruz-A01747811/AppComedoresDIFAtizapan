@@ -115,7 +115,7 @@ class InicioClienteFragment: Fragment() {
                         // No matching user found
                         println("User not found.")
                         usuarioIni.notNull = false
-                        Toast.makeText(context, "Complete los datos", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "Inicio de sesión fallido", Toast.LENGTH_SHORT).show()
                     }
                 }
         }
