@@ -18,6 +18,9 @@ import com.journeyapps.barcodescanner.BarcodeEncoder
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentAsistQrBinding
 import java.util.Calendar
 import java.util.Locale
+import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
+
+
 
 class AsistQrFragment : Fragment() {
 
@@ -29,6 +32,8 @@ class AsistQrFragment : Fragment() {
 
   // Declarar una referencia a la base de datos
   private lateinit var databaseReference: DatabaseReference
+
+
 
   override fun onCreateView(
     inflater: LayoutInflater,

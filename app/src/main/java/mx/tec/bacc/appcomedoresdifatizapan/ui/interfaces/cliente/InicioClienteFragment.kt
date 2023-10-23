@@ -8,52 +8,65 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.tasks.await
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentInicioClienteBinding
+import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
 
 class InicioClienteFragment: Fragment() {
+
     private val binding get() = _binding!!
     private var _binding: FragmentInicioClienteBinding? = null
-    private lateinit var auth: FirebaseAuth
     val db = FirebaseFirestore.getInstance()
 
-    data class Usuario(
-        val nombre: String,
-        val apellidos: String,
-        val curp: String,
-        val fechaNac: String,
-        val sexo: String,
-        val condicion: String,
-        val contrasena: String
-    )
+    object usuarioIni {
+        var nombre: String = ""
+        var apellidos: String = ""
+        var curp: String = ""
+        var fechaNac: String = ""
+        var sexo: String = ""
+        var condicion: String = ""
+        var notNull: Boolean = true
+        var contraseña: String = ""
+    }
 
-    fun searchUsuarioByCurp(targetCurp: String): Usuario? {
+    fun searchUsuarioByCurp(targetCurp: String, targetContraseña: String, callback: (Usuario?) -> Unit) {
         val usuariosCollection = db.collection("usuarios")
 
         try {
-            val querySnapshot = usuariosCollection.whereEqualTo("curp", targetCurp).get().await()
+            usuariosCollection.whereEqualTo("curp", targetCurp)
+                .whereEqualTo("contraseña", targetContraseña)
+                .get()
+                .addOnSuccessListener { querySnapshot ->
+                    for (document in querySnapshot.documents) {
+                        val data = document.data
+                        if (data != null) {
+                             val usuario = Usuario(
+                                data["nombre"] as String,
+                                data["apellidos"] as String,
+                                data["curp"] as String,
+                                data["fechaNac"] as String,
+                                data["sexo"] as String,
+                                data["condicion"] as String,
+                                data["contraseña"] as String
+                            )
+                            callback(usuario)
+                            return@addOnSuccessListener
+                        }
+                    }
 
-            for (document in querySnapshot.documents) {
-                val data = document.data
-                if (data != null) {
-                    return Usuario(
-                        data["nombre"] as String,
-                        data["apellidos"] as String,
-                        data["curp"] as String,
-                        data["fechaNac"] as String,
-                        data["sexo"] as String,
-                        data["condicion"] as String,
-                        data["contraseña"] as String
-                    )
+                    // If no matching document is found, return null
+                    callback(null)
                 }
-            }
-
-            // If no matching document is found, return null
-            return null
+                .addOnFailureListener { exception ->
+                    // Handle the exception here if necessary
+                    callback(null)
+                }
         } catch (e: Exception) {
-            return null
+            callback(null)
         }
     }
+
 
 
     override fun onCreateView(
@@ -73,42 +86,39 @@ class InicioClienteFragment: Fragment() {
             val curpString = etCurp.text.toString().trim()
             val passwordString = etContra.text.toString().trim()
 
-           /* suspend fun run() {
-                val targetCurp = "CURP12345"
-
-                val foundUsuario = searchUsuarioByCurp(targetCurp)
-
-                if (foundUsuario != null) {
-                    println("Found User: ${foundUsuario.nombre} ${foundUsuario.apellidos}")
-
-                } else {
-                    println("No user with the specified CURP found.")
+                val foundUsuario = searchUsuarioByCurp(curpString, passwordString) { usuario ->
+                    // Handle the result here
+                    if (usuario != null) {
+                        // A matching user was found
+                        // Use the `usuario` object
+                        usuarioIni.nombre = usuario.nombre
+                        usuarioIni.apellidos = usuario.apellidos
+                        usuarioIni.curp = usuario.curp
+                        usuarioIni.fechaNac = usuario.fechaNac
+                        usuarioIni.sexo = usuario.sexo
+                        usuarioIni.condicion = usuario.condicion
+                        usuarioIni.contraseña = usuario.contrasena
+                        usuarioIni.notNull = true
+                    } else {
+                        // No matching user found
+                        println("User not found.")
+                        usuarioIni.notNull = false
+                    }
                 }
-            }
-
-            runBlocking { run() } */
-
-            searchUsuarioByCurp(curpString)
-
-
         }
 
 
         return root
     }
 
-    public override fun onStart() {
-        super.onStart()
 
-        updateUI()
-    }
 
-    fun updateUI(user: Usuario?) {
-        if (user != null) {
+    fun updateUI() {
+        if (usuarioIni.notNull) {
             // El usuario está autenticado, puedes realizar acciones específicas para un usuario autenticado.
             // Por ejemplo, mostrar su nombre en la interfaz de usuario.
-            val curpUsuario = user.curp
-            val contraUsuario = user.contrasena
+            val curpUsuario =   usuarioIni.curp
+            val contraUsuario = usuarioIni.contraseña
 
             // Actualiza la interfaz de usuario con la información del usuario
             // (puedes hacer esto de acuerdo a tus necesidades)
@@ -129,6 +139,10 @@ class InicioClienteFragment: Fragment() {
             // También puedes deshabilitar funcionalidades que requieran autenticación.
         }
     }
+    public override fun onStart() {
+        super.onStart()
 
+        updateUI()
+    }
 }
 

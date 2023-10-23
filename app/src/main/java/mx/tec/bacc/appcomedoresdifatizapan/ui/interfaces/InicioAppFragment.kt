@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import mx.tec.bacc.appcomedoresdifatizapan.R
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentInicioAppBinding
+import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
 
 class InicioAppFragment : Fragment() {
     private val binding get() = _binding!!

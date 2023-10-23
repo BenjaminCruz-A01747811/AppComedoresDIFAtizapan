@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentPerfilUsuarioBinding
+import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
 
 class PerfilUsuarioFragment : Fragment() {
 
