@@ -76,11 +76,13 @@ class RegistroColabFragment: Fragment() {
                                 // Documento creado con éxito
                                 println("Documento creado con éxito")
                                 // Redirect to the desired screen or show a success message.
+                                Toast.makeText(context, "Cuenta creada de manera exitosa", Toast.LENGTH_SHORT).show()
                             }
                             .addOnFailureListener { e ->
                                 // Error al crear el documento
                                 println("Error al crear el documento: $e")
                                 // Handle the error, show an error message, etc.
+                                Toast.makeText(context, "Fallo al crear cuenta", Toast.LENGTH_SHORT).show()
                             }
                     }
                 }
