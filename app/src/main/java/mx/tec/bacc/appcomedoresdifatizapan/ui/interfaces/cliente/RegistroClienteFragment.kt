@@ -157,11 +157,13 @@ class RegistroClienteFragment: Fragment() {
                                 // Documento creado con éxito
                                 println("Documento creado con éxito")
                                 // Redirect to the desired screen or show a success message.
+                                Toast.makeText(context, "Usuario creado con exito", Toast.LENGTH_SHORT).show()
                             }
                             .addOnFailureListener { e ->
                                 // Error al crear el documento
                                 println("Error al crear el documento: $e")
                                 // Handle the error, show an error message, etc.
+                                Toast.makeText(context, "Error al registrar usuario", Toast.LENGTH_SHORT).show()
                             }
                     }
                 }
