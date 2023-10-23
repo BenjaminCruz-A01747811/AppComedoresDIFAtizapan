@@ -25,8 +25,23 @@ import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
 
 class AsistQrFragment : Fragment() {
 
-  private val db = FirebaseFirestore.getInstance()
 
+  fun getFechaActual(): String {
+    // Obtener la fecha actual
+    val calendar = Calendar.getInstance()
+
+    // Obtener el día del mes
+    val dia = calendar.get(Calendar.DAY_OF_MONTH)
+
+    // Obtener el mes
+    val mes = calendar.get(Calendar.MONTH) + 1
+
+    // Obtener el año
+    val anio = calendar.get(Calendar.YEAR)
+
+    // Concatenar la fecha en formato DD/MM/YYYY
+    return "${dia}/${mes}/${anio}"
+  }
   private var _binding: FragmentAsistQrBinding? = null
 
   private val binding get() = _binding!!
@@ -133,7 +148,7 @@ class AsistQrFragment : Fragment() {
 
     // Concatena el nombre del comensal con la fecha
     //val codigoQrData = "$textViewUsuario - $fechaFormateada"
-    val codigoQrData = "${InicioClienteFragment.usuarioIni.nombre},${InicioClienteFragment.usuarioIni.curp},${fechaCompleta},${InicioClienteFragment.usuarioIni.apellidos},${consumo_tipo}"
+    val codigoQrData = "${InicioClienteFragment.usuarioIni.nombre},${InicioClienteFragment.usuarioIni.curp},${getFechaActual()},${InicioClienteFragment.usuarioIni.apellidos},${consumo_tipo}"
 
     //Botón Generar QR
     btnGenerar.setOnClickListener {
