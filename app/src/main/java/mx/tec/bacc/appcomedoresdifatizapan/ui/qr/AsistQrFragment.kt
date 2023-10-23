@@ -16,6 +16,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.zxing.BarcodeFormat
 import com.journeyapps.barcodescanner.BarcodeEncoder
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentAsistQrBinding
+import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.InicioClienteFragment
 import java.util.Calendar
 import java.util.Locale
 import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
@@ -55,7 +56,7 @@ class AsistQrFragment : Fragment() {
     //TextView para mostrar el usuario actual
     val editText: EditText = binding.edtUserName
 
-    // Crear una nueva colección llamada "usuarios"
+    /*// Crear una nueva colección llamada "usuarios"
     val usuariosCollection = db.collection("consumo")
 
     // Crear un documento con datos en la colección "usuarios"
@@ -77,7 +78,7 @@ class AsistQrFragment : Fragment() {
       .addOnFailureListener { e ->
         // Error al crear el documento
         println("Error al crear el documento")
-      }
+      }*/
 
     /*
     //Inicializar la referencia a la base de datos
@@ -126,18 +127,18 @@ class AsistQrFragment : Fragment() {
 
     val imageView: ImageView = binding.ivQR
     val btnGenerar: Button = binding.btnGenQR
+
+    var consumo_tipo = "desayuno"
     //val editText: EditText = binding.editTextText
 
     // Concatena el nombre del comensal con la fecha
     //val codigoQrData = "$textViewUsuario - $fechaFormateada"
-    val codigoQrData = "$editText - $fechaCompletaString"
+    val codigoQrData = "${InicioClienteFragment.usuarioIni.nombre},${InicioClienteFragment.usuarioIni.curp},${fechaCompleta},${InicioClienteFragment.usuarioIni.apellidos},${consumo_tipo}"
 
     //Botón Generar QR
     btnGenerar.setOnClickListener {
 
-      db.collection("usuarios").document("usuarios_comedor").get().addOnSuccessListener {
-        editText.setText(it.get("userID") as String?)
-      }
+
       //val codigoQrData = "$editText - $fechaFormateada"
 
       try {
