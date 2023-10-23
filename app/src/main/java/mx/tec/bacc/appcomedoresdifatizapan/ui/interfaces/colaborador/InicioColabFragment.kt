@@ -110,7 +110,7 @@ class InicioColabFragment: Fragment() {
 
         // Cambiar a Registro Colaborador
         tvRegColab.setOnClickListener {
-            findNavController().navigate(R.id.nav_int_registro_cliente)
+            findNavController().navigate(R.id.nav_int_registro_colab)
         }
 
 
