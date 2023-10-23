@@ -95,7 +95,7 @@ class InicioClienteFragment: Fragment() {
             val curpString = etCurp.text.toString().trim()
             val passwordString = etContra.text.toString().trim()
 
-                searchUsuarioByCurp(curpString, passwordString) { usuario ->
+            searchUsuarioByCurp(curpString, passwordString) { usuario ->
                     // Handle the result here
                     if (usuario != null) {
                         // A matching user was found
@@ -108,6 +108,8 @@ class InicioClienteFragment: Fragment() {
                         usuarioIni.condicion = usuario.condicion
                         usuarioIni.contraseña = usuario.contrasena
                         usuarioIni.notNull = true
+
+                        findNavController().navigate(R.id.nav_asist_qr)
                     } else {
                         // No matching user found
                         println("User not found.")
