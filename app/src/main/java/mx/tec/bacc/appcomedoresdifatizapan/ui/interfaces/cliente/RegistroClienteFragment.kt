@@ -148,7 +148,8 @@ class RegistroClienteFragment: Fragment() {
                             "fechaNac" to fechaNac,
                             "sexo" to sexoString,
                             "condicion" to condicionString,
-                            "fechaRegistro" to currentDate // Add registration date
+                            "fechaRegistro" to currentDate, // Add registration date
+                            "contraseña" to passwordString
                         )
 
                         usuariosCollection.add(nuevoUsuario)
