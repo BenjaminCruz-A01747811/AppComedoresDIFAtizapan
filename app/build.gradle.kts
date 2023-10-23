@@ -65,6 +65,9 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx:22.1.2")
     implementation("com.google.android.libraries.places:places:3.2.0")
 
+    implementation ("com.google.android.gms:play-services-vision:20.1.3")
+
+
     implementation ("com.google.zxing:core:3.4.1" ) // Adjust the version as needed
 
     testImplementation("junit:junit:4.13.2")

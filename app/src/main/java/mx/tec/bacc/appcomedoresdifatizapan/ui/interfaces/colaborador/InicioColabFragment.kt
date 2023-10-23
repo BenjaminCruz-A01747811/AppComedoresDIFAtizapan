@@ -101,6 +101,8 @@ class InicioColabFragment: Fragment() {
                     colaboradorIni.sexo = colaborador.sexo
                     colaboradorIni.contraseña = colaborador.contraseña
                     colaboradorIni.notNull = true
+
+                    findNavController().navigate(R.id.nav_qr_scanner)
                 } else {
                     // No matching user found
                     println("User not found.")
