@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -114,6 +115,7 @@ class InicioClienteFragment: Fragment() {
                         // No matching user found
                         println("User not found.")
                         usuarioIni.notNull = false
+                        Toast.makeText(context, "Complete los datos", Toast.LENGTH_SHORT).show()
                     }
                 }
         }
