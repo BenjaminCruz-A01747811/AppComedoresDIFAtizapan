@@ -190,14 +190,14 @@
                         android:layout_weight="1">
 
                         <RadioButton
-                            android:id="@+id/radioButton"
+                            android:id="@+id/Masculino"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Masculino"
                             android:textColor="@color/white"/>
 
                         <RadioButton
-                            android:id="@+id/radioButton2"
+                            android:id="@+id/Femenino"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Femenino"
@@ -224,7 +224,7 @@
                         android:textSize="22sp" />
 
                     <CheckBox
-                        android:id="@+id/checkBox11"
+                        android:id="@+id/conEmbarazo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -232,7 +232,7 @@
                         android:textColor="@color/white"/>
 
                     <CheckBox
-                        android:id="@+id/checkBox13"
+                        android:id="@+id/conCronica"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -240,7 +240,7 @@
                         android:textColor="@color/white"/>
 
                     <CheckBox
-                        android:id="@+id/checkBox12"
+                        android:id="@+id/conDiscapacidad"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

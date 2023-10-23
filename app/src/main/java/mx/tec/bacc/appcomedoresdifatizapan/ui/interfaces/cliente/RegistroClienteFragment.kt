@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.CheckBox
+import android.widget.RadioButton
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -15,11 +17,79 @@ import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentRegistroClienteBi
 import java.time.format.DateTimeFormatter
 import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
 
+object usuarioReg {
+    var sexo: String = ""
+    var condicion: String = ""
+}
+
 class RegistroClienteFragment: Fragment() {
     private val binding get() = _binding!!
     private var _binding: FragmentRegistroClienteBinding? = null
     private val db = FirebaseFirestore.getInstance()
-    private lateinit var mAuth: FirebaseAuth
+
+    fun addWordWithComma(wordToAdd: String) {
+        if (usuarioReg.condicion.isEmpty()) {
+            usuarioReg.condicion = wordToAdd
+        } else {
+            usuarioReg.condicion += ", $wordToAdd"
+        }
+    }
+
+    fun onRadioButtonClicked(view: View) {
+        if (view is RadioButton) {
+            // Is the button now checked?
+            val checked = view.isChecked
+
+            // Check which radio button was clicked
+            when (view.getId()) {
+                R.id.Masculino ->
+                    if (checked) {
+                        usuarioReg.sexo = "Masculino"
+                    }
+                R.id.Femenino ->
+                    if (checked) {
+                        usuarioReg.sexo = "Femenino"
+                    }
+            }
+        }
+    }
+    fun removeWordFromString(inputString: String, wordToRemove: String): String {
+        val words = inputString.split(",").map { it.trim() }
+        val filteredWords = words.filter { it != wordToRemove }
+        return filteredWords.joinToString(", ")
+    }
+
+
+    fun onCheckboxClicked(view: View) {
+        if (view is CheckBox) {
+            val checked: Boolean = view.isChecked
+
+            when (view.id) {
+                R.id.conEmbarazo -> {
+                    if (checked) {
+                        addWordWithComma("Embarazada")
+                    } else {
+                        removeWordFromString(usuarioReg.condicion, "Embarazada")
+                    }
+                }
+                R.id.conCronica -> {
+                    if (checked) {
+                        addWordWithComma("Enfermedad_Cronica")
+                    } else {
+                        removeWordFromString(usuarioReg.condicion,"Enfermedad_Cronica")
+                    }
+                }
+                R.id.conDiscapacidad -> {
+                    if (checked) {
+                        addWordWithComma("Discapacidad")
+                    } else {
+                        removeWordFromString(usuarioReg.condicion,"Discapacidad")
+                    }
+                }
+            }
+        }
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,8 +106,8 @@ class RegistroClienteFragment: Fragment() {
         val fecha = binding.fechaET
         val curp = binding.curpET
         val password = binding.passwordET
-        val sexo = binding.sexoET
-        val condicion = binding.condicionET
+        val sexo = usuarioReg.sexo
+        val condicion = usuarioReg.condicion
         val tvInicCliente = binding.tvInicioCliente
 
         fun getCurrentDate(): String {
@@ -57,8 +127,8 @@ class RegistroClienteFragment: Fragment() {
             val fechaNac = fecha.text.toString().trim()
             val curpString = curp.text.toString().trim()
             val passwordString = password.text.toString().trim()
-            val sexoString = sexo.text.toString().trim()
-            val condicionString = condicion.text.toString().trim()
+            val sexoString = usuarioReg.sexo
+            val condicionString = usuarioReg.condicion
 
 
             if (nombreString.isEmpty() || apellidoString.isEmpty() || fechaNac.isEmpty() || curpString.isEmpty() || passwordString.isEmpty()) {
