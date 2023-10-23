@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navegacion_mobil"
-    app:startDestination="@id/nav_inicio_app">
+    app:startDestination="@id/nav_inicio_app"
+    >
 
 
     <fragment
         android:id="@+id/nav_inicio_app"
         android:name="mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.InicioAppFragment"
         android:label="Inicio App"
+        android:theme="@style/Theme.AppComedoresDIFAtizapan.NoActionBar"
         tools:layout="@layout/fragment_inicio_app"/>
 
     <fragment

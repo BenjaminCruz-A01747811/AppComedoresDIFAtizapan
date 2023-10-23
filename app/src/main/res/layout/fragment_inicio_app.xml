@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue">
+    android:background="@color/blue"
+    android:theme="@style/Theme.AppComedoresDIFAtizapan.NoActionBar">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,7 +45,8 @@
             android:layout_marginTop="150dp"
             android:layout_marginBottom="4dp"
             android:background="@drawable/button_blue"
-            android:text="Cliente"/>
+            android:text="Cliente"
+            tools:ignore="HardcodedText,TextContrastCheck" />
 
         <Button
             android:id="@+id/btnColab"
@@ -53,7 +55,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="4dp"
             android:background="@drawable/button_purple"
-            android:text="Colaborador"/>
+            android:text="Colaborador"
+            tools:ignore="HardcodedText,TextContrastCheck" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

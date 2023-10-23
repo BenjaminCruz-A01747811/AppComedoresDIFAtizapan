@@ -5,142 +5,154 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue"
-    >
+    android:theme="@style/Theme.AppComedoresDIFAtizapan.NoActionBar">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/ivLogo"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp"
-            app:shapeAppearanceOverlay="@style/Circular"
-            app:srcCompat="@drawable/logo1"
-            tools:ignore="ImageContrastCheck" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvSesionCliente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="INICIO DE SESIÓN"
-            android:textSize="30sp"
-            android:layout_marginTop="32dp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="HardcodedText" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/logo1"
+                tools:ignore="ImageContrastCheck" />
 
-        <TextView
-            android:id="@+id/tvCLiente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Cliente"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            tools:ignore="HardcodedText,TextContrastCheck" />
+            <TextView
+                android:id="@+id/tvSesionCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INICIO DE SESIÓN"
+                android:textSize="30sp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
 
-        <TextView
-            android:id="@+id/tvCURP"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="@string/curp"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:textStyle="bold|italic"
-            android:layout_gravity="center_horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            <TextView
+                android:id="@+id/tvCLiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Cliente"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                tools:ignore="HardcodedText,TextContrastCheck" />
 
-        <EditText
-            android:id="@+id/edtCurp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:ems="12"
-            android:hint="Ingrese su CURP"
-            android:importantForAutofill="no"
-            android:minHeight="48dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/white2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            tools:ignore="HardcodedText,TextContrastCheck,TextFields" />
+            <TextView
+                android:id="@+id/tvCURP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/curp"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold|italic"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/editTextText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <TextView
-            android:id="@+id/tvContra"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Contraseña:"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:textStyle="bold|italic"
-            android:layout_gravity="center_horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText"
-            tools:ignore="HardcodedText" />
+            <EditText
+                android:id="@+id/edtCurp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ems="12"
+                android:hint="Ingrese su CURP"
+                android:importantForAutofill="no"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/white2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                tools:ignore="HardcodedText,TextContrastCheck,TextFields" />
 
-        <EditText
-            android:id="@+id/edtContra"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:ems="12"
-            android:hint="Ingrese su contraseña"
-            android:importantForAutofill="no"
-            android:inputType="text"
-            android:minHeight="48dp"
-            android:textColorHint="@color/white2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"
-            tools:ignore="HardcodedText,TextContrastCheck" />
+            <TextView
+                android:id="@+id/tvContra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Contraseña:"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold|italic"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextText"
+                tools:ignore="HardcodedText" />
 
-        <Button
-            android:id="@+id/btnIngresar1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp"
-            android:text="Ingresar"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText2"
-            tools:ignore="HardcodedText" />
+            <EditText
+                android:id="@+id/edtContra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ems="12"
+                android:hint="Ingrese su contraseña"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textColorHint="@color/white2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                tools:ignore="HardcodedText,TextContrastCheck" />
 
-        <TextView
-            android:id="@+id/tvISColab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="56dp"
-            android:text="@string/colaborador"
-            android:textSize="16sp"
-            android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button3"
-            tools:ignore="TextContrastCheck" />
+            <Button
+                android:id="@+id/btnIngresar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:text="Ingresar"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+                tools:ignore="HardcodedText" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tvRegCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="56dp"
+                android:text="¿Eres nuev@? Regístrate aquí."
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="ir_reg_cliente"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:layout_marginBottom="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button3"
+                tools:ignore="TextContrastCheck" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

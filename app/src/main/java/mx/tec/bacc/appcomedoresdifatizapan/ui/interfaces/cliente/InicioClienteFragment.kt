@@ -1,16 +1,23 @@
 package mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.tasks.await
+import mx.tec.bacc.appcomedoresdifatizapan.R
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentInicioClienteBinding
+import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentRegistroClienteBinding
+import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentRegistroColaboradorBinding
 import mx.tec.bacc.appcomedoresdifatizapan.ui.interfaces.cliente.Usuario
 
 class InicioClienteFragment: Fragment() {
@@ -81,6 +88,8 @@ class InicioClienteFragment: Fragment() {
         val etCurp = binding.edtCurp
         val etContra = binding.edtContra
         val bnIngreso: Button = binding.btnIngresar1
+        // Obtener el TextView
+        val tvRegCliente = binding.tvRegCliente
 
         bnIngreso.setOnClickListener {
             val curpString = etCurp.text.toString().trim()
@@ -107,6 +116,10 @@ class InicioClienteFragment: Fragment() {
                 }
         }
 
+        // Cambiar a Registro Cliente
+        tvRegCliente.setOnClickListener {
+            findNavController().navigate(R.id.nav_int_registro_cliente)
+        }
 
         return root
     }
