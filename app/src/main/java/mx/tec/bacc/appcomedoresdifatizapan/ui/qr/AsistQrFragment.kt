@@ -56,16 +56,15 @@ class AsistQrFragment : Fragment() {
     val editText: EditText = binding.edtUserName
 
     // Crear una nueva colección llamada "usuarios"
-    val usuariosCollection = db.collection("usuarios")
+    val usuariosCollection = db.collection("consumo")
 
     // Crear un documento con datos en la colección "usuarios"
     val primerDocumento = hashMapOf(
       "nombre" to "Lalo",
       "apellidos" to "Cruz",
       "curp" to "L4L0NG4N1ZA",
-      "fechaNac" to "18/12/1234",
-      "sexo" to "Hombre",
-      "condicion" to "Discapacidad"
+      "consumo" to "",
+
     )
 
     usuariosCollection
