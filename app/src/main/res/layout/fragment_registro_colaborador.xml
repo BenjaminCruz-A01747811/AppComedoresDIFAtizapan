@@ -6,164 +6,171 @@
     android:layout_height="match_parent"
     android:background="@color/blue_g">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/ivLogo2"
-            android:layout_width="wrap_content"
-            android:layout_height="77dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_marginTop="4dp"
-            app:srcCompat="@drawable/logo3"
-            tools:ignore="ContentDescription" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:text="Registro Colaborador"
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textColor="@color/white"
-            android:textSize="36sp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            <ImageView
+                android:id="@+id/ivLogo2"
+                android:layout_width="wrap_content"
+                android:layout_height="77dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
+                app:srcCompat="@drawable/logo3"
+                tools:ignore="ContentDescription" />
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text=" Nombre(s):"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:layout_gravity="center_horizontal"
-            tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="Registro Colaborador"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
-        <EditText
-            android:id="@+id/edtNombre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:ems="15"
-            android:hint="Ingresa tu(s) nombre(s)"
-            android:inputType="text"
-            android:textColorHint="@color/white2"
-            android:textStyle="italic"
-            tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck"
-            android:importantForAutofill="no" />
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text=" Nombre(s):"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:layout_gravity="center_horizontal"
+                tools:ignore="HardcodedText" />
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_gravity="center_horizontal"
-            android:text="Apellidos:"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            tools:ignore="HardcodedText" />
+            <EditText
+                android:id="@+id/edtNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ems="15"
+                android:hint="Ingresa tu(s) nombre(s)"
+                android:inputType="text"
+                android:textColorHint="@color/white2"
+                android:textStyle="italic"
+                tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck"
+                android:importantForAutofill="no" />
 
-        <EditText
-            android:id="@+id/edtApellido"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:ems="15"
-            android:hint="Ingresa tus apellidos"
-            android:inputType="text"
-            android:textColorHint="@color/white2"
-            android:textStyle="italic"
-            tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck"
-            android:importantForAutofill="no" />
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Apellidos:"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                tools:ignore="HardcodedText" />
 
-        <TextView
-            android:id="@+id/textViewCorreo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text=" Correo:"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:layout_gravity="center_horizontal"
-            tools:ignore="HardcodedText" />
+            <EditText
+                android:id="@+id/edtApellido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ems="15"
+                android:hint="Ingresa tus apellidos"
+                android:inputType="text"
+                android:textColorHint="@color/white2"
+                android:textStyle="italic"
+                tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck"
+                android:importantForAutofill="no" />
 
-        <EditText
-            android:id="@+id/edtCorreo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:ems="15"
-            android:hint="Ingresa Correo"
-            android:inputType="text"
-            android:textColorHint="@color/white2"
-            android:textStyle="italic"
-            tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck"
-            android:importantForAutofill="no" />
+            <TextView
+                android:id="@+id/textViewCorreo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text=" Correo:"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:layout_gravity="center_horizontal"
+                tools:ignore="HardcodedText" />
 
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:text="Contraseña:"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            tools:ignore="HardcodedText" />
+            <EditText
+                android:id="@+id/edtCorreo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ems="15"
+                android:hint="Ingresa Correo"
+                android:inputType="text"
+                android:textColorHint="@color/white2"
+                android:textStyle="italic"
+                tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck"
+                android:importantForAutofill="no" />
 
-        <EditText
-            android:id="@+id/edtContra3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:ems="15"
-            android:hint="Ingresa una contraseña"
-            android:importantForAutofill="no"
-            android:inputType="text"
-            android:textColorHint="@color/white2"
-            android:textStyle="italic"
-            tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="Contraseña:"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                tools:ignore="HardcodedText" />
 
-        <Button
-            android:id="@+id/btnRegColab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="32dp"
-            android:text="Registrarme"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText2"
-            tools:ignore="HardcodedText" />
+            <EditText
+                android:id="@+id/edtContra3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ems="15"
+                android:hint="Ingresa una contraseña"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="@color/white2"
+                android:textStyle="italic"
+                tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
 
-        <TextView
-            android:id="@+id/tvInicioColab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="32dp"
-            android:text="¿Ya eres colaborador? Inicia sesión aquí."
-            android:textSize="16sp"
-            android:textStyle="italic"
-            android:clickable="true"
-            android:onClick="ir_reg_colab"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button3"
-            tools:ignore="TextContrastCheck" />
+            <Button
+                android:id="@+id/btnRegColab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:text="Registrarme"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvInicioColab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="32dp"
+                android:text="¿Ya eres colaborador? Inicia sesión aquí."
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:clickable="true"
+                android:onClick="ir_reg_colab"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button3"
+                tools:ignore="TextContrastCheck" />
 
 
-    </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
