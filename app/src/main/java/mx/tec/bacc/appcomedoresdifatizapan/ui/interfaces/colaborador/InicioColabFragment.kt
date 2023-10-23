@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import mx.tec.bacc.appcomedoresdifatizapan.R
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentInicioColaboradorBinding
 import mx.tec.bacc.appcomedoresdifatizapan.databinding.FragmentRegistroColaboradorBinding
@@ -81,7 +82,7 @@ class InicioColabFragment: Fragment() {
         val etCorreo = binding.edtCorreo
         val etContra = binding.edtContra2
         val btnIngresar = binding.btnIngresar2
-        //val tvRegColab = binding.tvRegColab
+        val tvRegColab = binding.tvRegColab
 
         btnIngresar.setOnClickListener{
             val correoString = etCorreo.text.toString().trim()
@@ -108,10 +109,8 @@ class InicioColabFragment: Fragment() {
         }
 
         // Cambiar a Registro Colaborador
-        val tvRegColab = view?.findViewById<TextView>(R.id.nav_int_registro_cliente)
-        tvRegColab?.setOnClickListener {
-            // Iniciar el nuevo fragmento
-            startActivity(Intent(activity, FragmentRegistroColaboradorBinding::class.java))
+        tvRegColab.setOnClickListener {
+            findNavController().navigate(R.id.nav_int_registro_cliente)
         }
 
 

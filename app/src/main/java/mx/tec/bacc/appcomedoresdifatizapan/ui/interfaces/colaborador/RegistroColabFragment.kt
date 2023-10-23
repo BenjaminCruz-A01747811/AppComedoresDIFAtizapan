@@ -40,6 +40,7 @@ class RegistroColabFragment: Fragment() {
         val etApellidos = binding.edtApellido
         val etContra = binding.edtContra3
         val btnRegColab = binding.btnRegColab
+        val tvInicColab = binding.tvInicioColab
 
         val currentDate = getCurrentDate()
         val usuariosCollection = db.collection("colaboradores")
@@ -84,8 +85,7 @@ class RegistroColabFragment: Fragment() {
         }
 
         // Cambiar a Inicio Colaborador
-        val tvInicColab = view?.findViewById<TextView>(R.id.nav_int_inicio_colab)
-        tvInicColab?.setOnClickListener {
+        tvInicColab.setOnClickListener {
             // Iniciar el nuevo fragmento
             startActivity(Intent(activity, FragmentInicioColaboradorBinding::class.java))
         }
