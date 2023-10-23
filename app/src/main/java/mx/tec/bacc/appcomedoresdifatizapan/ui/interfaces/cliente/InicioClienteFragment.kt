@@ -86,7 +86,7 @@ class InicioClienteFragment: Fragment() {
             val curpString = etCurp.text.toString().trim()
             val passwordString = etContra.text.toString().trim()
 
-                val foundUsuario = searchUsuarioByCurp(curpString, passwordString) { usuario ->
+                searchUsuarioByCurp(curpString, passwordString) { usuario ->
                     // Handle the result here
                     if (usuario != null) {
                         // A matching user was found
@@ -123,8 +123,7 @@ class InicioClienteFragment: Fragment() {
             // Actualiza la interfaz de usuario con la información del usuario
             // (puedes hacer esto de acuerdo a tus necesidades)
             // Por ejemplo, puedes mostrar el CURP del usuario en un TextView.
-            edtCurp.text = "CURP: $curpUsuario"
-            edtContra.text = "Contraseña: $contraUsuario"
+
 
             // Además, puedes habilitar o deshabilitar funcionalidades específicas para usuarios autenticados.
 
@@ -133,8 +132,7 @@ class InicioClienteFragment: Fragment() {
             // Por ejemplo, ocultar elementos de la interfaz de usuario que requieren autenticación.
 
             // Puedes mostrar un mensaje para alentar al usuario a iniciar sesión o registrarse.
-            curpTextView.text = "Usuario no autenticado"
-            contraTextView.text = ""
+
 
             // También puedes deshabilitar funcionalidades que requieran autenticación.
         }
