@@ -40,6 +40,7 @@ class RegistroColabFragment: Fragment() {
         val etNombre = binding.edtNombre
         val etApellidos = binding.edtApellido
         val etContra = binding.edtContra3
+        val etCorreo = binding.edtCorreo
         val btnRegColab = binding.btnRegColab
         val tvInicColab = binding.tvInicioColab
 
@@ -47,8 +48,9 @@ class RegistroColabFragment: Fragment() {
         val usuariosCollection = db.collection("colaboradores")
 
         btnRegColab.setOnClickListener{
-            val correoString = etNombre.text.toString().trim()
-            val nombreString = etApellidos.text.toString().trim()
+            val nombreString = etNombre.text.toString().trim()
+            val correoString = etCorreo.text.toString().trim()
+            val apellidoString = etApellidos.text.toString().trim()
             val contraString = etContra.text.toString().trim()
 
             if (nombreString.isEmpty() || correoString.isEmpty() || contraString.isEmpty() ) {
@@ -64,6 +66,7 @@ class RegistroColabFragment: Fragment() {
                         val nuevoUsuario = hashMapOf(
                             "nombre" to nombreString,
                             "correo" to correoString,
+                            "apellido" to apellidoString,
                             "contraseña" to contraString,
                             "fechaRegistro" to currentDate // Add registration date
                         )
