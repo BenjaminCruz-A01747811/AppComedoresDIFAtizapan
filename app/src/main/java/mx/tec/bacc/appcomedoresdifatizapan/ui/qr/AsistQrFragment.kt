@@ -135,9 +135,7 @@ class AsistQrFragment : Fragment() {
     //Botón Generar QR
     btnGenerar.setOnClickListener {
 
-      db.collection("usuarios").document("usuarios_comedor").get().addOnSuccessListener {
-        editText.setText(it.get("userID") as String?)
-      }
+
       //val codigoQrData = "$editText - $fechaFormateada"
 
       try {
